@@ -1,0 +1,52 @@
+How to create a branch from GIThub
+
+//CLONE A REPOSITORY
+1. Create a folder and name it anything 
+2. Right click then select Git Bash here
+3. On Bash, type git clone <name of the remote> (e.g https://github.com/monmonplaza/myrepository.git)
+4. type cd myrepository (it will go inside the clone repository);
+5. type git branch <branchName> (make sure the branch name is descriptive)
+6. type git checkout mybranch (this will switch you from master to the branch directory)
+7. type code . (this will open VSCode)
+8. add/update/delete any file 
+9. type git add . (add your update to the local repo)
+10. type git status (use to check the status of add)
+11. type git commit -m "your comment"
+12. type git push origin <branchName>
+13. type git checkout master (switch directory from branch to master)
+14. type git merge (merge branch update to the master repository )
+
+
+
+
+USEFUL GIT COMMAND 
+
+1. git ls-files (view all files of the repository)
+2. git rm --cache <FileName> (remove a file from the repository)
+
+
+//HOST YOUR WEBSITE USING GITHUB
+
+1. open the project directory
+2. right click then select Git Bash here
+3. type npm init  (install node_modules - edit the package info to your preference)
+4. type npm install gh-pages --save-dev (install github pages)
+6. type touch .gitignore (this will create a .gitignore file)
+7. type code . (open VScode)
+8. open the .gitignore file then type node_modules then save
+9. open the package.json file  then add this command under the "script" item <"deploy": "gh-pages -d dist"> ("dist" is the folder that contains the index.html)
+10. type git init
+11. type git add .
+12. type git commit -m "ready to push to remote repo"
+13. go to github then create a new repository
+14. git remote add origin https://github.com/monmonplaza/<repositoryName>.git
+15. git push -u origin master
+16. type npm run deploy
+
+
+
+
+
+
+ 
+ 
