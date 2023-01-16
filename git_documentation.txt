@@ -43,7 +43,36 @@ USEFUL GIT COMMAND
 15. git push -u origin master
 16. type npm run deploy
 
+(repository owner)
+1. create branch for other member
+git checkout -b "member-a-branch"
+-this will switch the branch
+git push origin member-a-branch
 
+git checkout -b "member-b-branch"
+-this will switch the branch
+git push origin member-b-branch
+
+
+(member)
+Let individual member edit their branch (example branch a)
+
+git add .
+git commit -m "branch a commit"
+git push origin member-a-branch
+
+(repository owner)
+2. switch branch to master
+git checkout master
+
+(if needed)
+git add .
+git commit -m "you commit"
+
+git checkout member-a-branch
+git pull origin member-a-branch
+git push origin member-a-branch
+git merge member-a-branch
 
 
 
